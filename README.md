@@ -33,6 +33,8 @@ Message: the password for your new machine is 72psjajyhd%#
 ```
 
 #### Things To Note
+Notes created via the CLI can still be viewed via the web application and each one will still receive its own unique URL resembling `shred.io/<token>`. In the event the recipient does not use the CLI tool, they can just use a browser.
+
 For simplicity and to avoid having to type a bunch of parameters most note options found on the web application are automated.
 
 * Note passwords are randomly generated 16 byte strings
