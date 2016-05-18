@@ -5,7 +5,7 @@ NoteShred CLI tool written in GoLang
 #### Get An API Key
 Sign up at www.noteshred.com.
 From the dashboard click `Settings` then scroll down and copy the API key
-#### Add Environment Variable To .bash_profile
-```echo "export NOTESHRED_API_KEY=<your API key>" >> .bash_history```
+#### Add API Key Env Variable To .bash_profile
+```echo "export NOTESHRED_API_KEY=<your API key>" >> ~/.bash_profile```
 #### Reload Your .bash_profile
 Run ```source ~/.bash_profile```
