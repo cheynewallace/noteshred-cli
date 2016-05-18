@@ -45,7 +45,7 @@ For simplicity and to avoid having to type a bunch of parameters most note optio
 Sign up at www.noteshred.com.
 From the dashboard click `Settings` then scroll down and copy the API key
 #### Add The API Key To Your .bash_profile
-Replace <your API key> in the following line with the copied key and run
+Replace `<your API key>` in the following line with the copied key and run
 
 ```echo "export NOTESHRED_API_KEY=<your API key>" >> ~/.bash_profile```
 #### Reload Your .bash_profile
