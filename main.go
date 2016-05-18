@@ -20,7 +20,7 @@ func init() {
 		os.Exit(0)
 	}
 
-  // show or new
+	// show or new
 	action = strings.ToLower(os.Args[1])
 
 	if action == "show" {
