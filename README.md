@@ -11,7 +11,7 @@ A simple command line based tool for sending encrypted, private information with
 Note Successfully Created!
 Token:    56cbd17e8e
 Password: TSuj#5gMkaFZiegl
-URL:      http://shred.io/56cbd17e8e
+URL:      shred.io/56cbd17e8e
 CLI:      noteshred show 56cbd17e8e TSuj#5gMkaFZiegl
 ############################################
 ```

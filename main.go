@@ -63,7 +63,7 @@ func main() {
 			fmt.Println("Note Successfully Created!")
 			fmt.Println(fmt.Sprintf("Token:    %s", note.Token))
 			fmt.Println(fmt.Sprintf("Password: %s", uPass))
-			fmt.Println(fmt.Sprintf("URL:      http://shred.io/%s", note.Token))
+			fmt.Println(fmt.Sprintf("URL:      shred.io/%s", note.Token))
 			fmt.Println(fmt.Sprintf("CLI:      noteshred show %s %s", note.Token, uPass))
 			fmt.Println("############################################")
 		}
