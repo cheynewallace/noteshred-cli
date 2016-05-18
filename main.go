@@ -20,6 +20,7 @@ func init() {
 		os.Exit(0)
 	}
 
+  // show or new
 	action = strings.ToLower(os.Args[1])
 
 	if action == "show" {
@@ -32,10 +33,8 @@ func init() {
 
 	} else if action == "new" {
 		message = os.Args[2]
-
 		if len(os.Args) == 4 && os.Args[3] != "" {
 			email = os.Args[3]
-			fmt.Println(email)
 		}
 	}
 }
