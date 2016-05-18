@@ -40,7 +40,7 @@ func getNote(token *string, password *string) *Note {
 
 func newNote(content *string, password *string, email *string) *Note {
 	data := url.Values{}
-	data.Set("title", "Command Line Note")
+	data.Set("title", "CLI Note")
 	data.Set("shred_method", "1")
 	data.Set("password", *password)
 	data.Set("content", *content)
