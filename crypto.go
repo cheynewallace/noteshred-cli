@@ -9,7 +9,7 @@ func randStr(strSize int, randType string) string {
 	var dictionary string
 
 	if randType == "mixed" {
-		dictionary = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#$%^&*@!"
+		dictionary = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#"
 	}
 
 	if randType == "alphanum" {
