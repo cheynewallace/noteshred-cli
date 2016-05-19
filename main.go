@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"strings"
 )
@@ -12,7 +11,9 @@ var action, token, password, apiKey, message, email string
 func init() {
 	apiKey = strings.ToLower(os.Getenv("NOTESHRED_API_KEY"))
 	if apiKey == "" {
-		log.Fatal("NOTESHRED_API_KEY not set")
+		fmt.Println("NOTESHRED_API_KEY not set")
+		fmt.Println("")
+		os.Exit(0)
 	}
 
 	if len(os.Args) < 3 {
@@ -65,6 +66,9 @@ func main() {
 			fmt.Println(fmt.Sprintf("Password: %s", uPass))
 			fmt.Println(fmt.Sprintf("URL:      shred.io/%s", note.Token))
 			fmt.Println(fmt.Sprintf("CLI:      noteshred show %s %s", note.Token, uPass))
+			if email != "" {
+				fmt.Println(fmt.Sprintf("Notified: %s", email))
+			}
 			fmt.Println("############################################")
 		}
 	}

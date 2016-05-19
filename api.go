@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"net/url"
+	"time"
 )
 
 func getNote(token *string, password *string) *Note {
@@ -39,17 +40,21 @@ func getNote(token *string, password *string) *Note {
 }
 
 func newNote(content *string, password *string, email *string) *Note {
-	data := url.Values{}
-	data.Set("title", "CLI Note")
-	data.Set("shred_method", "1")
-	data.Set("password", *password)
-	data.Set("content", *content)
-	data.Set("recipients", *email)
-	bs := bytes.NewBufferString(data.Encode())
+	t := time.Now()
+	title := fmt.Sprintf("%s %v Note", t.Month(), t.Day())
+	noteMarshalled, err := json.Marshal(Note{
+		Title:       title,
+		Password:    *password,
+		Content:     *content,
+		ShredMethod: 1,
+		Recipients:  []string{*email}})
+
+	bs := bytes.NewBuffer(noteMarshalled)
 
 	client := &http.Client{}
 	req, err := http.NewRequest("POST", fmt.Sprintf("https://api.noteshred.com/v1/notes"), bs)
 	req.Header.Add("Authorization", fmt.Sprintf("Token token=%s", apiKey))
+	req.Header.Set("Content-Type", "application/json")
 	resp, err := client.Do(req)
 	defer resp.Body.Close()
 	if err != nil {

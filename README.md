@@ -5,6 +5,10 @@ A simple command line based tool for sending encrypted, private information with
 #### Create A Note
 ```noteshred new "the password for your new machine is 72psjajyhd%#"```
 
+#### Create A Note And Send The Details To Someone Via Email
+
+```noteshred new "the password for your new machine is 72psjajyhd%#" someone@gmail.com```
+
 *Result*
 ```
 ############################################
@@ -38,7 +42,7 @@ Notes created via the CLI can still be viewed via the web application and each o
 For simplicity and to avoid having to type a bunch of parameters most note options found on the web application are automated.
 
 * Note passwords are randomly generated 16 byte strings
-* Note titles are generic and set to "CLI Note"
+* Note titles are generic and resemble "May 18 Note"
 * All notes are set to "shred after reading"
 
 
@@ -47,8 +51,8 @@ For simplicity and to avoid having to type a bunch of parameters most note optio
 Sign up at www.noteshred.com.
 From the dashboard click `Settings` then scroll down and copy the API key
 #### Add The API Key To Your .bash_profile
-Replace `<your API key>` in the following line with the copied key and run
+Replace `<your API key>` in the following line with the copied key and run this command from inside the cloned directory
 
-```echo "export NOTESHRED_API_KEY=<your API key>" >> ~/.bash_profile```
+```echo "export NOTESHRED_API_KEY=<your API key>" >> ~/.bash_profile; ln -s $(pwd)/bin/noteshred /usr/local/bin/noteshred```
 #### Reload Your .bash_profile
 Run ```source ~/.bash_profile```
